@@ -43,4 +43,6 @@ int main() {
         printf("arr[%d] : ",i);
         printf("%d\n", arr[i]);
     }
+
+    return 0;
 }
