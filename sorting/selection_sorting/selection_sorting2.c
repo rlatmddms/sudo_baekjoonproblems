@@ -1,10 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    const int arr_size; scanf("%d",&arr_size);
+    int arr_size; scanf("%d",&arr_size);
     int arr[arr_size];
-    for(int i = 0; i < arr_size; i++) 
+    for(int i = 0; i < arr_size; i++) {
+        printf("arr[%d] : ",i);
         scanf("%d",&arr[i]);
+    }
+    putchar(10);
+    
     for(int i = 0; i < arr_size; i++) {
         int minidx = i;
         for(int j = i+1; j < arr_size; j++) {
@@ -16,7 +20,12 @@ int main() {
         arr[i] = arr[minidx];
         arr[minidx] = tmp;
     }
-    for(int i = 0; i < arr_size; i++) 
-        printf("%d, ",arr[i]);
+    
+    printf("----after----\n");
+    for(int i = 0; i < arr_size; i++) {
+        printf("arr[%d] : ",i);
+        printf("%d\n", arr[i]);
+    }
+    
     return 0;
 }
