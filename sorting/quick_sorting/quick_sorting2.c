@@ -25,21 +25,21 @@ void quick_sort(int *arr, int left, int right) {
 }
 
 int main() {
-    int n; printf("입력할 수의 개수 : "); scanf("%d",&n);
-    int arr[n];
+    int arr_size; printf("입력할 수의 개수 : "); scanf("%d",&arr_size);
+    int arr[arr_size];
 
     
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < arr_size; i++) {
         printf("arr[%d] : ",i);
         scanf("%d", &arr[i]);
     }
     putchar(10);
 
-    quick_sort(arr,0,n-1);
+    quick_sort(arr,0,arr_size-1);
     
 
     printf("----after----\n");
-    for(int i = 0; i < n; i++) {
+    for(int i = 0; i < arr_size; i++) {
         printf("arr[%d] : ",i);
         printf("%d\n", arr[i]);
     }
