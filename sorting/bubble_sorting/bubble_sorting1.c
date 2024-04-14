@@ -3,9 +3,9 @@
 int main() {
     int arr[10] = {1,6,2,4,8,2,45,77,12,3};
 
-    printf("----before----\n");
-    for(int i = 0; i < n; i++) {
-        printf("arr[%d] : %d\n",i,arr[i]);
+    printf("before: ");
+    for(int i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
     }
     putchar(10);
     
@@ -19,10 +19,20 @@ int main() {
         }
     }
     
-    printf("----after----\n");
-    for(int i = 0; i < n; i++) {
-        printf("arr[%d] : ",i);
-        printf("%d\n", arr[i]);
+    printf("after : ");
+    for(int i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
     }
+
+    /*
+
+    --실행 결과--
+    before: 1 6 2 4 8 2 45 77 12 3
+    after : 1 2 2 3 4 6 8 12 45 77
+
+    */
+
+
+    
     return 0;
 }
